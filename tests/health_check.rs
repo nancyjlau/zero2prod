@@ -18,7 +18,7 @@ async fn health_check_works() {
     assert_eq!(Some(0), response.content_length());
 }
 
-fn spawn_app() -> String{
+fn spawn_app() -> String {
     let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind address");
     // we retrieve port assigned to us by OS
     let port = listener.local_addr().unwrap().port();
